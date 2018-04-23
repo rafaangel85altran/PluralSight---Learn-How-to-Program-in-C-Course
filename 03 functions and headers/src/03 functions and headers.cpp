@@ -21,7 +21,7 @@ double add (double x, double y, double z)
 	return ( x + y + z);
 }
 
-float add (float x, float y, float z)
+int add (int x, int y, int z)
 {
 	return (x + y + z);
 }
@@ -30,8 +30,11 @@ int main() {
 	int a = add(3, 4);		//The compiler is able to diferenciate between this to functions because they have different number of arguments and types
 	cout << a << endl;
 
-	int b = add(1.0, 2.2, 3.3);
+	float b = add(1.0, 2.2, 3.3);
 	cout << b << endl;
+
+	int c = add(1, 2, 3);
+		cout << c << endl;
 
 	return 0;
 }
