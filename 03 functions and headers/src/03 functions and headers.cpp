@@ -11,20 +11,13 @@ using namespace std;
 
 //test
 
-double add ( double x, double y)
-{
-	return (x + y);
-}
+double add ( double x, double y);
 
-double add (double x, double y, double z)
-{
-	return ( x + y + z);
-}
 
-int add (int x, int y, int z)
-{
-	return (x + y + z);
-}
+double add (double x, double y, double z);
+
+int add (int x, int y, int z);
+
 
 int main() {
 	int a = add(3, 4);		//The compiler is able to diferenciate between this to functions because they have different number of arguments and types
