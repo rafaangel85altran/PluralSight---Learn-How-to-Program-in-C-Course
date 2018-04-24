@@ -19,16 +19,27 @@ int main() {
 
 	cin >> name;
 
+	string greeting = "Hello " + name;
+
 	int l = name.length();
 
-	string greeting = "Hello " + name;
+	cout << "\"" + greeting << "\" is " << l << " characters long." << endl;
+
+
 
 	if (name == "Kate")
 	{
 		greeting += ", I know you.";
 	}
 
-	cout << greeting << ". Your name is " << l << " characters long." << endl;
+	char space = greeting.find(' ');				// find() its going to give me a pointer in a place whether there is a space.
+
+	string beginning = greeting.substr(space + 1);	// substr() will go from the place given  to the end
+
+	if (beginning == name)
+	{
+		cout << "Expected result" << endl;
+	}
 
 	system("pause");
 
