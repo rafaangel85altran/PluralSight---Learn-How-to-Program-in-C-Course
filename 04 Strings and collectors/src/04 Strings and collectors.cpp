@@ -7,9 +7,25 @@
 //============================================================================
 
 #include <iostream>
+#include <string>
+
 using namespace std;
 
 int main() {
-	cout << "02 flowcontrol" << endl; // prints 02 flowcontrol
+
+	string name;
+
+	cout << "What is your name?" << endl;
+
+	cin >> name;
+
+	string greeting = "Hello " + name;
+
+	if (name == "Kate")
+	{
+		greeting += ", I know you.";
+	}
+
+	cout << greeting << endl;
 	return 0;
 }
