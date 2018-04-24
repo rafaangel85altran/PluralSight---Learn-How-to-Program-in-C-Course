@@ -1,6 +1,4 @@
-// functions
-
-#include "functions.h"
+// functions.c
 
 double add ( double x, double y)
 {
