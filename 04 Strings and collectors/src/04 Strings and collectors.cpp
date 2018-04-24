@@ -19,6 +19,8 @@ int main() {
 
 	cin >> name;
 
+	int l = name.length();
+
 	string greeting = "Hello " + name;
 
 	if (name == "Kate")
@@ -26,6 +28,9 @@ int main() {
 		greeting += ", I know you.";
 	}
 
-	cout << greeting << endl;
+	cout << greeting << ". Your name is " << l << " characters long." << endl;
+
+	system("pause");
+
 	return 0;
 }
