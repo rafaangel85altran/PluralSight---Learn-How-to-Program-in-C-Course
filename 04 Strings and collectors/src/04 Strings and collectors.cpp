@@ -26,7 +26,6 @@ int main() {
 	cout << "\"" + greeting << "\" is " << l << " characters long." << endl;
 
 
-
 	if (name == "Kate")
 	{
 		greeting += ", I know you.";
