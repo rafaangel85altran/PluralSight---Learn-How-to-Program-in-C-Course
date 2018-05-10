@@ -39,9 +39,9 @@ int main() {
 	}
 
 
-	for(auto item:vs)
+	for(auto item:vs)			//ranged for bucle
 	{
-		cout << item << " ";
+		cout << item << " ";	//for every element of the vector, print a space
 	}
 
 	cout << endl;
