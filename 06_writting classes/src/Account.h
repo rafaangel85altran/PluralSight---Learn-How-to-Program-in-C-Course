@@ -17,15 +17,15 @@
 
 class Account
 {
-private :
-	int balance;
-	std::vector<Transaction> log;
+private :								//Usually variables are private
+	int balance;						//actual amount of money
+	std::vector<Transaction> log;		//log containing all the transactions performed
 
-public :
+public :								//And functions are public, so they can be used in the rest of the solution
 	Account();
-	std::vector<std::string> Report();
-	bool Deposit(int amt);
-	bool Withdraw(int amt);
+	std::vector<std::string> Report();	//Function Report() that returns a vector of strings
+	bool Deposit(int amt);				//function Deposit that returns a bool whether the deposit success or not
+	bool Withdraw(int amt);				//Function Withdraw that returns a bool whether the withdraw success or not
 };
 
 

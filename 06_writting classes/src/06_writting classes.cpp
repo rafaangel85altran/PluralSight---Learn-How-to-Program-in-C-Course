@@ -16,7 +16,7 @@ int main() {
 	Account a1;									//An account object called a1
 	a1.Deposit(90);
 
-	cout << "After despositing $90" << endl;
+	cout << "After despositting $90" << endl;
 	for (auto s:a1.Report())					//Ranged for loop seen in Module 05 collectors
 	{
 		cout << s << endl;

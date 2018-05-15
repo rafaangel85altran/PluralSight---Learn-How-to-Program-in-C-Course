@@ -20,7 +20,8 @@ int main() {
 	vector<int> vi;				//vector with undetermined number of integers called vi (this declaration is thanks to the include <vector>
 	for (int i=0; i<10; i++)	//This  "i" only has scope until the last "}"
 	{
-		vi.push_back(i);		//call a member function of the vi object (which is a vector) This function puts a new value at the end of the vector
+		vi.push_back(i);		//call a member function of the vi object (which is a vector)
+								//This function puts a new value at the end of the vector
 	}
 
 	for (auto item:vi)			//new syntax, its called "ranged for" or "range based for"

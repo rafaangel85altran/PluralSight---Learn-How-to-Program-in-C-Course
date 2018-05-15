@@ -3,27 +3,30 @@
  *
  *  Created on: 15 may. 2018
  *      Author: win7
+ *
+ *  Description:
+ *  	Account constructor is also present
+ *  	Definition of Report(), Deposit() and Withdraw()
+ *
  */
 
+#include "Account.h"						// I need to include the header file
 
-#include <string>
-#include <vector>
-#include "Account.h"
+using namespace std;						// I can use namespace std because this is a .cpp file
 
-using namespace std;
-
-Account::Account(void) :balance(0)
+Account::Account(void) :balance(0)			// Constructor of the class, the int balance starts from zero
 {
 }
 
-vector<string> Account::Report()
+vector<string> Account::Report()			// The fucntion Report() of the class Account
 {
-	vector<string> report;
-	report.push_back("Balance is " + to_string(balance));
-	report.push_back("Transactions: ");
-	for (auto t:log)
+	vector<string> report;					// Is a vector of strings with no elements
+	report.push_back("Balance is " +		// Puts output text + the actual amount money to the screen
+			to_string(balance));
+	report.push_back("Transactions: ");		//Also prints out the complete log
+	for (auto t:log)						//ranged for loop
 	{
-		report.push_back(t.report());
+		report.push_back(t.report());		//for every element of the vector of strings report
 	}
 	report.push_back("---------------------");
 	return report;
