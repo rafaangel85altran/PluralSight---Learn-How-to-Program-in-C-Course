@@ -6,6 +6,12 @@
 // Description : Hello World in C++, Ansi-style
 //============================================================================
 
+/*
+ * v1.1 Changelog
+ * 		Changed vector log from class account changed to log_op
+ * 		in order to avoid inconsistences between log function in math.h
+ */
+
 #include <iostream>
 #include "Account.h"
 

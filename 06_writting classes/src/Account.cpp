@@ -23,8 +23,9 @@ vector<string> Account::Report()			// The fucntion Report() of the class Account
 	vector<string> report;					// Is a vector of strings with no elements
 	report.push_back("Balance is " +		// Puts output text + the actual amount money to the screen
 			to_string(balance));
-	report.push_back("Transactions: ");		//Also prints out the complete log
-	for (auto t:log)						//ranged for loop
+	report.push_back("Transactions: ");		// Also prints out the complete log
+	for (auto t:log_op)						// Ranged for loop
+											//log_op is a vector of the class transaction
 	{
 		report.push_back(t.report());		//for every element of the vector of strings report
 	}
@@ -34,10 +35,11 @@ vector<string> Account::Report()			// The fucntion Report() of the class Account
 
 bool Account::Deposit(int amt)
 {
-	if (amt>= 0)
+	if (amt >= 0)							// If the amount of money to deposit is greater than zero proceed
 	{
-		balance += amt;
-		log.push_back(Transaction(amt, "Deposit"));
+		balance += amt;						// Addition
+		log_op.push_back(Transaction
+				(amt, "Deposit"));
 		return true;
 	}
 	else
@@ -54,7 +56,7 @@ bool Account::Withdraw(int amt)
 		if (balance >= amt)
 		{
 			balance -= amt;
-			log.push_back(Transaction(amt, "Withdraw"));
+			log_op.push_back(Transaction(amt, "Withdraw"));
 			return true;
 		}
 		else

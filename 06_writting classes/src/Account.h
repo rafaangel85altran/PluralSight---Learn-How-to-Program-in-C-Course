@@ -19,10 +19,10 @@ class Account
 {
 private :								//Usually variables are private
 	int balance;						//actual amount of money
-	std::vector<Transaction> log;		//log containing all the transactions performed
+	std::vector<Transaction> log_op;	//log containing all the transactions performed (name changed to log_op)
 
 public :								//And functions are public, so they can be used in the rest of the solution
-	Account();
+	Account();							//Constructor declaration
 	std::vector<std::string> Report();	//Function Report() that returns a vector of strings
 	bool Deposit(int amt);				//function Deposit that returns a bool whether the deposit success or not
 	bool Withdraw(int amt);				//Function Withdraw that returns a bool whether the withdraw success or not
