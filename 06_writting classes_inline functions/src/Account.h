@@ -12,19 +12,21 @@
 #include <vector>
 #include "Transaction.h"
 
+//Why not using namespace std here??? The answer is, YOU SHOULD NEVER USE IT IN A HEADER FILE
+//Why? headers are intended to declare variables, functions, objects and classes,
 
 class Account
 {
-private :
-	std::vector<Transaction> log_op;
+private :								//Usually variables are private
+	int balance;						//actual amount of money
+	std::vector<Transaction> log_op;	//log containing all the transactions performed (name changed to log_op)
 
-public :
-	int balance;						// What would happen if balance is a public variable of account?
-	Account();
-	std::vector<std::string> Report();
-	bool Deposit(int amt);
-	bool Withdraw(int amt);
-	int GetBalance(){return balance;}
+public :								//And functions are public, so they can be used in the rest of the solution
+	Account();							//Constructor declaration
+	std::vector<std::string> Report();	//Function Report() that returns a vector of strings
+	bool Deposit(int amt);				//function Deposit that returns a bool whether the deposit success or not
+	bool Withdraw(int amt);				//Function Withdraw that returns a bool whether the withdraw success or not
+	int GetBalance(){return balance;}	//New function, it returns int balance - Now it´s an in line function
 };
 
 
