@@ -14,11 +14,11 @@ class Transaction		// Class transaction declaration
 {
 private:				// As usuall, variables are private
 	int amount;
-	std::string type; 	// a better way exist
+	std::string type; 	// Type of Transaction, can be a Deposit or a Withdraw
 
 public:
-	Transaction(int amt, std::string kind);	// And funtions are public
-	std::string report();					// Function string report()
+	Transaction(int amt, std::string kind);	// Constructor
+	std::string report();					// Function string report(), not to missmatch with Report() from Account
 };
 
 
