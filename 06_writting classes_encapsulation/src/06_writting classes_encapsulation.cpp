@@ -3,13 +3,14 @@
 // Author      : RA
 // Version     :
 // Copyright   : Just for training
-// Description : Hello World in C++, Ansi-style
+// Description : 06 Writting classes - Encapsulation
 //============================================================================
 
 #include <iostream>
 using namespace std;
 
 int main() {
-	cout << "Module 06 Writting classes - Encapsulation" << endl; // prints Module 06 Writting classes - Encapsulation
+	cout << "Module 06 Writting classes - Encapsulation" << endl; // prints Module
+	system ("pause");
 	return 0;
 }
