@@ -73,8 +73,9 @@ bool Account::Withdraw(int amt)
 		return false;
 	}
 }
-
+/* In order to make an in line function we´ll comment this normally declared function
 int Account::GetBalance()
 {
 	return balance;
 }
+*/

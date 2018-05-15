@@ -26,7 +26,7 @@ public :								//And functions are public, so they can be used in the rest of t
 	std::vector<std::string> Report();	//Function Report() that returns a vector of strings
 	bool Deposit(int amt);				//function Deposit that returns a bool whether the deposit success or not
 	bool Withdraw(int amt);				//Function Withdraw that returns a bool whether the withdraw success or not
-	int GetBalance();					//New function, it returns int balance
+	int GetBalance(){return balance;}	//New function, it returns int balance - Now it´s an in line function
 };
 
 
