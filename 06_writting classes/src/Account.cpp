@@ -19,7 +19,7 @@ Account::Account(void) :balance(0)
 vector<string> Account::Report()
 {
 	vector<string> report;
-	report.push_back("Balance is" + to_string(balance));
+	report.push_back("Balance is " + to_string(balance));
 	report.push_back("Transactions: ");
 	for (auto t:log)
 	{
