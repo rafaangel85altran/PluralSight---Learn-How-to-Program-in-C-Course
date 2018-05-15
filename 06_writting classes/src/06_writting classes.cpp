@@ -41,10 +41,19 @@ int main() {
 
 	cout << "After withdraw $50 then $10" << endl;
 
-	for (auto s:a1.Report())					//Final report
+	for (auto s:a1.Report())
 	{
 		cout << s << endl;
 	}
+
+	a1.Withdraw(-10);							//Try to withdraw a negative amount of money
+	a1.Withdraw(1000);							//Try to withdraw a huge amount of money
+
+	for (auto s:a1.Report())					//Report
+		{
+			cout << s << endl;
+		}
+
 	system("pause");
 	return 0;
 }
