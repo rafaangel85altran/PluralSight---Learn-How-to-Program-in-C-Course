@@ -22,16 +22,16 @@ int main() {
 		cout << s << endl;
 	}
 
-	a1.withdraw(50);
+	a1.Withdraw(50);
 
-	if (a1.withdraw(100))						//If the withdraw is true
+	if (a1.Withdraw(100))						//If the withdraw is true
 	{
 		cout << "Second withdraw success" << endl;
 	}
 
 	cout << "After withdraw $50 then $100" << endl;
 
-	for (auto s:ai.Report())
+	for (auto s:a1.Report())
 	{
 		cout << s << endl;
 	}

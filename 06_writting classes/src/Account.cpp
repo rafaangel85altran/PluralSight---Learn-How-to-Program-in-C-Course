@@ -23,7 +23,7 @@ vector<string> Account::Report()
 	report.push_back("Transactions: ");
 	for (auto t:log)
 	{
-		report.push_back(t.Report());
+		report.push_back(t.report());
 	}
 	report.push_back("---------------------");
 	return report;
