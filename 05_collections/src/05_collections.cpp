@@ -39,7 +39,7 @@ int main() {
 	}
 
 
-	for(auto item:vs)			//ranged for bucle
+	for(auto item:vs)			//ranged for loop
 	{
 		cout << item << " ";	//for every element of the vector, print a space
 	}
