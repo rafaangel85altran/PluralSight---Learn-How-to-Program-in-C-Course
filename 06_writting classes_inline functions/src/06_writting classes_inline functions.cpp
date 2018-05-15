@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : 06_writting.cpp
+// Name        : 06_writting classes inline section.cpp
 // Author      : RA
 // Version     :
 // Copyright   : Just for training
@@ -7,9 +7,41 @@
 //============================================================================
 
 #include <iostream>
+#include "Account.h"
+
 using namespace std;
 
 int main() {
-	cout << "Module 06 Writting classes - In line section" << endl; // prints Module 06 Writting classes - In line section
+
+	Account a1;
+	a1.Deposit(90);
+
+	cout << "After despositing $90 "
+			<< "Balance is " <<					//This is the In-line function
+			a1.GetBalance() << endl;
+	for (auto s:a1.Report())
+	{
+		cout << s << endl;
+	}
+
+	a1.Withdraw(50);
+
+	if (a1.Withdraw(10))
+	{
+		cout << "Second withdraw success" << endl;
+	}
+	else
+	{
+		cout << "Withdraw not possible, not enough money, pal" << endl;
+	}
+
+	cout << "After withdraw $50 then $10" << endl;
+
+	for (auto s:a1.Report())
+	{
+		cout << s << endl;
+	}
+
+	system("pause");
 	return 0;
 }
