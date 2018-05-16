@@ -17,9 +17,10 @@ class Account
 {
 private :
 	std::vector<Transaction> log_op;
+	int balance;
+	int limit;
 
 public :
-	int balance;						// What would happen if balance is public?
 	Account();
 	std::vector<std::string> Report();
 	bool Deposit(int amt);

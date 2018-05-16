@@ -15,7 +15,7 @@
 
 using namespace std;						// I can use namespace std because this is a .cpp file
 
-Account::Account(void) :balance(0)			// Constructor of the class, the int balance starts from zero
+Account::Account(void) :balance(0), limit(-100)
 {
 }
 
@@ -55,7 +55,7 @@ bool Account::Withdraw(int amt)
 {
 	if (amt > 0)
 	{
-		if (balance >= amt)
+		if (balance + limit >= amt)
 		{
 			balance -= amt;
 			log_op.push_back(Transaction(amt, "Withdraw"));

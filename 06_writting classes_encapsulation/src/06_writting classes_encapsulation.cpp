@@ -20,9 +20,6 @@ int main() {
 			<< "Balance is " <<
 			a1.GetBalance() << endl;
 
-	a1.balance += 10000;		// Now that balance is public I can accidentally change his  value
-								// In an unlikely situation
-
 	cout << "Now balance is " << a1.GetBalance() << endl;
 
 	for (auto s:a1.Report())
