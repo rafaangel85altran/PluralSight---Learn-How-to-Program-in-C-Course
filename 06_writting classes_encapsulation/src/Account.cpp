@@ -15,7 +15,7 @@
 
 using namespace std;						// I can use namespace std because this is a .cpp file
 
-Account::Account(void) :balance(0), limit(-100)
+Account::Account(void) :balance(0), limit(100)
 {
 }
 
@@ -34,14 +34,17 @@ vector<string> Account::Report()			// The fucntion Report() of the class Account
 	return report;							// Return the whole report
 }
 
-bool Account::Deposit(int amt)				// Function Deposit() of the class Account
+bool Account::Deposit(int amt)
 {
-	if (amt > 0)							// If the amount of money to deposit is greater than zero, then proceed
+	if (amt > 0)
 	{
-		balance += amt;						// Addition balance + amount
-		log_op.push_back(Transaction		// Push_back The Transaction type "Deposit" with the amount and  the type
+		balance += amt;
+		log_op.push_back(Transaction
 				(amt, "Deposit"));
-		return true;						//return a true to proceed
+		balance -= 1;						//New feature, service charge
+				log_op.push_back(Transaction
+						(1, "Service Change"));
+		return true;
 	}
 	else
 	{
@@ -59,6 +62,10 @@ bool Account::Withdraw(int amt)
 		{
 			balance -= amt;
 			log_op.push_back(Transaction(amt, "Withdraw"));
+
+			balance -= 1;									//New feature, service charge
+					log_op.push_back(Transaction
+							(1, "Service Change"));
 			return true;
 		}
 		else
