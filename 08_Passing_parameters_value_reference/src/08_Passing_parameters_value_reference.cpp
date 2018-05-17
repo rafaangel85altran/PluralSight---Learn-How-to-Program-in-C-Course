@@ -11,7 +11,7 @@
 
 using namespace std;
 
-#include "Transactions.h"
+#include "Transaction.h"
 
 void ChangeTransaction(Transaction& t)
 {

@@ -5,8 +5,8 @@
  *      Author: win7
  */
 
-#ifndef TRANSACTIONS_H_
-#define TRANSACTIONS_H_
+#ifndef TRANSACTION_H_
+#define TRANSACTION_H_
 
 #include <string>
 
@@ -23,4 +23,4 @@ public:
 };
 
 
-#endif /* TRANSACTIONS_H_ */
+#endif /* TRANSACTION_H_ */
