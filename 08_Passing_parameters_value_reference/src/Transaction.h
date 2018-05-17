@@ -9,6 +9,7 @@
 #define TRANSACTION_H_
 
 #include <string>
+#include <iostream>
 
 class Transaction
 {

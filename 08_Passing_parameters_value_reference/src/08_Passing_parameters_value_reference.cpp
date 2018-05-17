@@ -9,6 +9,8 @@
 
 #include <iostream>
 
+typedef int BOOL;
+
 using namespace std;
 
 #include "Transaction.h"
@@ -25,16 +27,19 @@ void TrytoChangeTransaction(Transaction t)
 
 
 int main() {
-	Transaction deposit(50, "Deposit");
-	cout << "Original: " << deposit.Report() << endl;
 
-	TrytoChangeTransaction(deposit);
+	BOOL j = 5;
+
+	cout << "j = " << j << endl;
+
+	Transaction deposit(50, "Deposit");		//Class Transaction constructed with amount=50 and type=deposit
+	cout << "Original: " << deposit.Report() << endl;	//Object t of the class transaction calls member function report()
+
+	TrytoChangeTransaction(deposit);					//function passing object deposit by value,
 	cout << "By value " << deposit.Report() << endl;
 
 	ChangeTransaction(deposit);
-	cout << "By value " << deposit.Report() << endl;
-
-	cout << "Test5" << endl;
+	cout << "By reference " << deposit.Report() << endl;
 
 	system("pause");
 	return 0;
