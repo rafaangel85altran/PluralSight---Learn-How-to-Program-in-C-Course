@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : 08_passing_parameters.cpp
+// Name        : 08_Passing_parameters_value_reference.cpp
 // Author      : RA
 // Version     :
 // Copyright   : Just for training

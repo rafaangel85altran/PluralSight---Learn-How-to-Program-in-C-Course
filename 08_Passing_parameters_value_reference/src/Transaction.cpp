@@ -25,7 +25,7 @@ Transaction::Transaction(int amt, std::string kind):amount(amt), type(kind)
  *
  */
 
-string Transaction::report()
+string Transaction::Report() const
 {
 	string report;					// String to print
 	report += "   ";				// Indent space
