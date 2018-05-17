@@ -6,10 +6,12 @@
 // Description : Hello World in C++, Ansi-style
 //============================================================================
 
-#include <Transaction.h>
+
 #include <iostream>
 
 using namespace std;
+
+#include "Transactions.h"
 
 void ChangeTransaction(Transaction& t)
 {
@@ -31,6 +33,8 @@ int main() {
 
 	ChangeTransaction(deposit);
 	cout << "By value " << deposit.Report() << endl;
+
+	cout << "Test5" << endl;
 
 	system("pause");
 	return 0;
